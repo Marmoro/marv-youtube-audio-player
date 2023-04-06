@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-halfmoon-preferred-mode="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Only YouTube Player</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet"  href="halfmoon-variables.min.css" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-set-preferred-mode-onload="true">
+  <div id="player-container" class="container">
+    <div id="video-info" class="d-flex align-items-center font-size-20 mb-20">
+      <img id="thumbnail" src="" alt="Video thumbnail">
+      <span id="video-title" class="ml-10">No video</span>
+    </div>
+    <div>
+      <input type="url" placeholder="https://youtube.com/..." id="video-url" class="form-control">
+    </div>
+    <div id="controls" class="d-flex align-items-center mt-20">
+      <div class="btn-group">
+        <button id="pause-btn" class="btn btn-secondary btn-sm">
+          <i class="fas fa-pause"></i>
+        </button>
+        <button id="play-btn" class="btn btn-primary btn-sm">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="stop-btn" class="btn btn-danger btn-sm">
+          <i class="fas fa-stop"></i>
+        </button>
+      </div>
+
+      <input type="range" id="volume" class="form-control-range ml-10">
+      <span id="play-time" class="ml-10">00:00</span>
+    </div>
+    <input type="range" id="seek-bar" class="form-control-range mt-20 w-full" min="0" max="100" step="0.1" value="0">
+
+      </div>
+  <div id="player"></div>
+  <script src="halfmoon.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
